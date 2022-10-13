@@ -65,7 +65,7 @@ console.log("an empty array returns:", getLast(emptyArray));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find(value, array) {
-  for (x of array) {
+  for (const x of array) {
     if (x === value) {
       return true;
     }
@@ -92,7 +92,7 @@ console.log("isFirstLetter - should say false", isFirstLetter("z", "apple"));
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
   let sum = 0;
-  for (x of array) {
+  for (const x of array) {
     sum += x;
   }
   // TODO: loop to add items
@@ -109,7 +109,7 @@ console.log("the sum of everything in newTestArray is:", sumAll(newTestArray));
 
 function purgeNeg(array) {
   let allPositives = [];
-  for (x of array) {
+  for (const x of array) {
     if (x > 0) {
       allPositives.push(x);
     }
@@ -126,12 +126,12 @@ console.log("All the positives in newTestArray are:", purgeNeg(newTestArray));
 function minMax(array) {
   let min = array[0];
   let max = array[0];
-  for (x of array) {
+  for (const x of array) {
     if (x < min) {
       min = x;
     }
   }
-  for (x of array) {
+  for (const x of array) {
     if (x > max) {
       max = x;
     }
